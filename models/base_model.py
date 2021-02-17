@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This module define a class BaseModel """
+"""This module define a class BaseModel."""
 from uuid import uuid4
 from datetime import datetime
 import models
