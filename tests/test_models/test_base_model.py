@@ -7,6 +7,7 @@ import unittest
 from models import storage
 from models.base_model import BaseModel
 
+
 class TestBaseModelinit(unittest.TestCase):
     """Class to add Unittest for a BaseModel class.
         __init__ method.
@@ -15,6 +16,7 @@ class TestBaseModelinit(unittest.TestCase):
         obj = BaseModel()
         self.assertEqual(BaseModel, type(obj))
 
+
 class TestBaseModelid(unittest.TestCase):
     """Class to add Unittest for a BaseModel class.
         id attribute.
@@ -22,7 +24,7 @@ class TestBaseModelid(unittest.TestCase):
     def test_unique_id(self):
         ob = BaseModel()
         ob2 = BaseModel()
-        self.assertNotEqual(ob.id,ob2.id)
+        self.assertNotEqual(ob.id, ob2.id)
 
 if __name__ == '__main__':
     unittest.main()
