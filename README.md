@@ -28,19 +28,19 @@ the following are the commands available in the console and a short description 
 
 > (hbnb) create User
 3ace6256-6756-4207-92a9-243ecac4d5ee
-(hbnb)
+> (hbnb)
 
 - To see the created objects, you should use `all` or `show` command and get something like:
 
 > (hbnb)show User 3ace6256-6756-4207-92a9-243ecac4d5ee
 [User] (3ace6256-6756-4207-92a9-243ecac4d5ee) {'id': '3ace6256-6756-4207-92a9-243ecac4d5ee', 'updated_at': datetime.datetime(2021, 2, 17, 19, 22, 52, 127143), 'created_at': datetime.datetime(2021, 2, 17, 19, 22, 52, 127143)}
-(hbnb)
+> (hbnb)
 
-- With  `all User` with xx will see all objects of type User in a list but in this case, only have one created.
+- With  `all User` will see all objects of type User in a list but in this case, only have one created.
 
 > (hbnb)all User
 ["[User] (3ace6256-6756-4207-92a9-243ecac4d5ee) {'id': '3ace6256-6756-4207-92a9-243ecac4d5ee', 'updated_at': datetime.datetime(2021, 2, 17, 19, 22, 52, 127143), 'created_at': datetime.datetime(2021, 2, 17, 19, 22, 52, 127143)}"]
-(hbnb)
+> (hbnb)
 
 - In the directory, the file "file.json" should be have the directory of all objects in JSON style.
 - In the same way, you can implement the different commands to delete and update (You can add new attributes to the different objects).
