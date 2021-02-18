@@ -64,6 +64,20 @@ class TestFileStorage_all(unittest.TestCase):
         self.assertEqual(dict, type(storage.all()))
 
 
+class TestFileStorage_new(unittest.TestCase):
+    """Class to add Unittest for FileStorage class.
+       new() method.
+    """
+    def test_new(self):
+        """Check new() method"""
+        b = BaseModel(id="b-new")
+        storage.new(b)
+        objects_dict = storage.all()
+        keys = objects_dict.keys()
+        b_key = "BaseModel." + b.id
+        self.assertTrue(b_key in keys)
+
+
 class TestFileStorage_save(unittest.TestCase):
     """Class to add Unittest for FileStorage class.
        save() method.
