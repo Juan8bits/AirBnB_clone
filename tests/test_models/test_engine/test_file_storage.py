@@ -41,8 +41,8 @@ class TestFileStorage_Attributes(unittest.TestCase):
         fs = FileStorage()
         self.assertEqual(dict, type(fs.all()))
 
-        @unittest.skip('Unknow work')
-        def test_FS_empty_objects(self):
+    @unittest.skip('Unknow work')
+    def test_FS_empty_objects(self):
         """Check empty __objects attribute."""
         try:
             os.remove("file.json")
@@ -61,6 +61,9 @@ class TestFileStorage_all(unittest.TestCase):
     def test_all(self):
         """Check the type of __objects attribute.
         """
+        ob = FileStorage()
+        my_dict = ob.all()
+        self.assertEqual(dict, type(my_dict))
         self.assertEqual(dict, type(storage.all()))
 
 
@@ -151,10 +154,6 @@ class TestDocs_for_file_storage_file(unittest.TestCase):
     """ Check for documentation. """
     def test_module_doc(self):
         """ check for module documentation """
-        self.assertTrue(len(file_storage.__doc__) > 0)
-
-    def test_class_doc(self):
-        """ check for documentation """
         self.assertTrue(len(file_storage.__doc__) > 0)
 
     def test_method_docs(self):
