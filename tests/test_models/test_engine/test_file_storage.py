@@ -41,9 +41,9 @@ class TestFileStorage_Attributes(unittest.TestCase):
         fs = FileStorage()
         self.assertEqual(dict, type(fs.all()))
 
-    @unittest.skip('Unknow work')
-    def test_FS_empty_objects(self):
-        """Check empty __objects attribute."""
+        """@unittest.skip('Unknow work')
+        def test_FS_empty_objects(self):
+        ->>Check empty __objects attribute.
         try:
             os.remove("file.json")
         except FileNotFoundError:
@@ -52,6 +52,7 @@ class TestFileStorage_Attributes(unittest.TestCase):
         fs.reload()
         empty = {}
         self.assertEqual(empty, fs.all())
+        """
 
 
 class TestFileStorage_all(unittest.TestCase):
